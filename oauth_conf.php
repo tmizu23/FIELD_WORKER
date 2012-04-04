@@ -1,11 +1,11 @@
 <?php
 $conf = array(
   'consKey'
-        => '122054407841.apps.googleusercontent.com',
+        => '',
   'consSecret'
-        => 'K-J5lAdso0rjwIC-FGdF1ZZd',
+        => '',
   'callbackUrl'
-        => 'http://www.ecoris.co.jp/fieldworker/callback.php',
+        => '',
   'authUrl'
         => 'https://accounts.google.com/o/oauth2/auth',
   'acsTokenUrl'
