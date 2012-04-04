@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+ 
+ function init(){
+      var clientId = '122054407841.apps.googleusercontent.com';
+      var scopes = 'https://www.googleapis.com/auth/fusiontables';
+	  var redirect = 'http://www.ecoris.co.jp/gps/test.html';
+      var url = "https://accounts.google.com/o/oauth2/auth?scope=" +  encodeURIComponent(scopes) + "&state=&redirect_uri=" + redirect + "&response_type=token&client_id=122054407841.apps.googleusercontent.com";
+	  document.getElementById("test").href = url;
+	  document.getElementById("test").innerText = url;
+	  
+}
+
+function getdata() {
+  var params = {}, queryString = location.hash.substring(1),regex = /([^&=]+)=([^&]*)/g, m;
+  while (m = regex.exec(queryString)) {
+   params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+  }
+		  var query = encodeURIComponent("SHOW TABLES");
+		  var URL = "/cgi-bin/proxy.cgi?url=https://www.google.com/fusiontables/api/query?sql=" + query; 
+	  URL = "/cgi-bin/proxy.cgi?url=" + encodeURIComponent("https://www.google.com");
+		  var req = new XMLHttpRequest();
+req.open("GET",URL, true );	 　
+//req.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
+//req.setRequestHeader( "Authorization", "Bearer " + encodeURIComponent(params['access_token']));
+req.onreadystatechange = function receiveRequestToken() {
+  if( req.readyState == 4 ) {
+    if(req.status == 200) {
+      alert(req.getContentText());
+    } else {
+      alert("error");
+    }
+  }
+};
+req.send(null);
+}
+
+function getdata2(){
+var params = {}, queryString = location.hash.substring(1),regex = /([^&=]+)=([^&]*)/g, m;
+  while (m = regex.exec(queryString)) {
+   params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+  }
+ var queryUrlHead = 'http://www.google.com/fusiontables/api/query?sql=';
+    var queryUrlTail = '&jsonCallback=?'; // ? could be a function name
+    
+    // write your SQL as normal, then encode it
+    var query = "SHOW TABLES";
+    var queryurl = encodeURI(queryUrlHead + query + queryUrlTail);
+
+    var jqxhr = $.get(queryurl, dataHandler, "jsonp");
+/*$.ajax({
+    url : queryurl,
+    method : 'GET',
+	 dataType: "jsonp",
+    beforeSend : function(req) {
+        req.setRequestHeader('Authorization', "Bearer " + encodeURIComponent(params['access_token']));
+    }
+});*/
+}
+function dataHandler(){
+alert("a");
+}
+
+
+function callback(){
+alert("yes");
+}
+</script>
+  </head>
+  <body onload="init();">
+	<a href="" id="test"></a>
+	<button onclick="getdata();">call api</button>
+  </body>
+</html>

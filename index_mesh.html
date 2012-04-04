@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
+  
+  </head>
+  <body>
+
+    <section data-role="page" id="home">
+        <header data-role="header"><h1>Ecoris Maps Sample</h1></header>
+        <div data-role="content">
+		<h3>検索フィールド</h3>
+		<form id="mapform" action="makefile.php" method="post" data-ajax="false">
+	      <div data-role="fieldcontain">
+	        <label for="search-restaurants">地図を取得:</label>
+	        <input type="search" name="meshcode" id="meshcode" value="" />
+	      </div>
+	
+		</form>
+        </div>
+        <footer data-role="footer"><h4>ecoris</h4></footer>
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>FIELD_WORKER</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="fieldworker_online.js" charset="utf-8"></script>
+</head>
+<body>
+<div>
+<form id="clipform" action="clipmap.php" method="post">
+<input type="hidden" id="center_x" name="center_x" value="" />
+<input type="hidden" id="center_y" name="center_y" value="" />
+<input type="hidden" id="res" name="res" value="" />
+</form>
+</div>
+<div id="main" style="position:absolute;width:100%;height:100%;overflow: hidden;">
+<div id="map" style="width:100%;height:100%;">
+<div id="light" class="white_content">
+<div style="text-align:right">
+<a href = "javascript:void(0)"  onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+</div>
+<h3>FIELD_WORKER(α版)の使い方</h3>
+<p>
+国土地理院の地形図をスマートフォンから閲覧できるウェブアプリです。
+<br>
+特定の場所をCLIPしておくと圏外でも地形図を表示できます。
+</p>
+<p>
+ナビ、データ入力（飛翔図、確認地点、植生図）の機能を追加予定...
+</p>
+<p>
+最終的には、現場に持っていける電子野帳を目指してます。
+</p>
+
+<h4>使い方</h4>
+<ol>
+<li>ドラッグで移動、ホイールで拡大縮小</li>
+<li>切り出したい場所を画面の中心にあわせて"CLIP"を押す。</li>
+<li>切り出した地図のページをiphoneで「ホーム画面に追加」する。</li>
+<li>圏外の場所で表示させる。</li>
+</ol>
+<p>
+<a href="http://portal.cyberjapan.jp/kiyaku.html#haikei">国土地理院背景地図等データ利用規約</a>
+</p>
+</div>
+<div id="fade" class="black_overlay"></div>
+</div>
+
+</div>
+
+</body>
+</html>

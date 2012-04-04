@@ -1,0 +1,196 @@
+	
+	.button {
+		padding: 5px 10px;
+		//display: inline;
+		background: #777 url(button.png) repeat-x bottom;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		font-weight: bold;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		text-shadow: 1px 1px #666;
+		}
+	.button:hover {
+		background-position: 0 center;
+		}
+	.button:active {
+		background-position: 0 top;
+		position: relative;
+		top: 1px;
+		padding: 6px 10px 4px;
+		}
+	.button.red { background-color: #e50000; }
+	.button.purple { background-color: #9400bf; }
+	.button.green { background-color: #58aa00; }
+	.button.orange { background-color: #ff9c00; }
+	.button.blue { background-color: #2c6da0; }
+	.button.black { background-color: #333; }
+	.button.white { background-color: #fff; color: #000; text-shadow: 1px 1px #fff; }
+	.button.small { font-size: 75%; padding: 3px 7px; }
+	.button.small:active { padding: 4px 7px 2px; background-position: 0 top; }
+	.button.large { font-size: 125%; padding: 7px 12px; }
+	.button.large:active { padding: 8px 12px 6px; background-position: 0 top; }
+
+.navibtn {
+  display: block;color: #fff;
+  cursor: pointer;
+  background-color: #aaa;
+  border: #bbb;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 2px 7px;
+}
+
+.navibtn2 {
+  display: block;
+  cursor: pointer;
+  background-color: #ccc;
+  border: inset 2px #ddd;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #fff;
+  
+  padding: 0px 5px;
+}
+.navibtn:active {
+  display: block;
+  cursor: pointer;
+  background-color: #ccc;
+  border: inset 2px #ddd;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #fff;
+  
+  padding: 0px 5px;
+}
+
+.movebtn {
+ border: inset 1px #ddd;
+}
+.movebtn2 {
+ border: inset 0px #ddd;
+}
+.black_overlay{
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.80;
+			filter: alpha(opacity=80);
+}
+.white_content {
+			display: none;
+			position: relative;
+                        text-align:left;
+			margin:0px auto;
+			top: 5%;
+			width: 80%;
+			height: 80%;
+			padding: 10px;
+			border: 3px solid orange;
+			background-color: white;
+			z-index:1002;
+			overflow: auto;
+		}
+
+  html { height: 100% }
+  body { height: 100%; margin: 0px; padding: 0px }
+  #map { height: 100% }
+
+
+
+#navbar ul {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	font-weight:nomal;
+}
+
+#navbar li {
+	width:70px;
+	float:left;
+}
+
+
+#navbar li div {
+	background-color:#000066;
+	font-size:12px;
+	display:block;
+	height:25px;
+	width:70px;
+	line-height:25px;
+	text-align:center;
+                  color:#FFFFFF;
+                   border:solid 1px;
+                   border-color: #cccccc #666666 #666666 #cccccc;
+}
+
+#navbar ul ul {
+	width:100%;
+	float:left;
+}
+
+#navbar ul ul li div{
+                   font-size:11px;
+	 background-image:none;
+	 height:auto;
+	 line-height:nomal;
+                   background-color:#6699ff;
+                   border:solid 1px;
+                   border-color: #cccccc #666666 #666666 #cccccc;
+	width:67px;
+                  padding:1px;
+                  color:#333333;
+}
+
+
+#navbar ul ul li div:hover {
+                   background-color:#003399;
+                  color:#FFFFFF;
+}
+
+
+#navbar ul ul {
+                    visibility:hidden;
+}
+
+.balloon-body {
+   position: relative;
+   margin-left: 20px;
+   background-color: #fff;
+   border:1px solid #ccc;
+}
+
+.balloon-triangle {
+   position: absolute; bottom: -20px; right: 20px;
+   width: 0; height: 0;
+   border-top: 20px solid #fff;
+   border-right: 20px solid transparent;
+   
+}
+
+.btn{
+display: inline-block;
+min-width: 30px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+text-align: center;
+color: #444;
+font-size: 50%;
+font-weight: bold;
+height: 27px;
+padding: 0 8px;
+line-height: 27px;
+border-radius: 2px;
+background-color: whiteSmoke;
+
+}
